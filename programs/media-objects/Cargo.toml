@@ -1,0 +1,22 @@
+[package]
+name = "media-objects"
+version = "0.1.0"
+description = "Created with Anchor"
+edition = "2018"
+
+[lib]
+crate-type = ["cdylib", "lib"]
+name = "media_objects"
+
+[features]
+no-entrypoint = []
+no-idl = []
+no-log-ix-name = []
+cpi = ["no-entrypoint"]
+default = []
+
+[dependencies]
+anchor-lang = "0.22.0"
+anchor-spl = "0.22.0"
+mpl-token-metadata = { version = "1.2.4", features = ["no-entrypoint"] }
+unimoon-base = { path = "../unimoon-base", features = ["cpi"] }

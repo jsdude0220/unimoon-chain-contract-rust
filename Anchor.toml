@@ -1,0 +1,20 @@
+[features]
+seeds = false
+[programs.localnet]
+unimoon_base = "Fg6PaFpoGXkYsidMpWTK6W2BeZ7FEfcYkg476zPFsLnS"
+media_objects = "AtnsRniY7WdEban5BDenyDD8bD63JijL8EC1gn9SpZ3L"
+capture_actions = "ErjUjtqKE5AGWUsjseSJCVLtddM6rhaMbDqmhzraF9h6"
+
+[registry]
+url = "https://anchor.projectserum.com"
+
+[provider]
+cluster = "localnet"
+wallet = "/root/.config/solana/id.json"
+
+[scripts]
+test = "yarn run ts-mocha -p ./tsconfig.json -t 1000000 tests/**/*.ts"
+
+[[test.genesis]]
+address = "metaqbxxUerdq28cj1RbAWkYQm3ybzjb6a8bt518x1s"
+program = "./deps/metaplex/token-metadata/target/deploy/mpl_token_metadata.so"
